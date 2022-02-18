@@ -31,16 +31,16 @@ Vec3 Color::axis(Axis a) {
 }
 
 bool Manager::quit(Undo& undo) {
-    if(!already_denied_save && n_actions_at_last_save != undo.n_actions()) {
-        save_first_shown = true;
-        after_save = [this](bool success) {
-            already_denied_save = success;
-            SDL_Event quit;
-            quit.type = SDL_QUIT;
-            SDL_PushEvent(&quit);
-        };
-        return false;
-    }
+    // if(!already_denied_save && n_actions_at_last_save != undo.n_actions()) {
+    //     save_first_shown = true;
+    //     after_save = [this](bool success) {
+    //         already_denied_save = success;
+    //         SDL_Event quit;
+    //         quit.type = SDL_QUIT;
+    //         SDL_PushEvent(&quit);
+    //     };
+    //     return false;
+    // }
     return true;
 }
 
