@@ -31,6 +31,7 @@ Vec3 Color::axis(Axis a) {
 }
 
 bool Manager::quit(Undo& undo) {
+    abort();
     // if(!already_denied_save && n_actions_at_last_save != undo.n_actions()) {
     //     save_first_shown = true;
     //     after_save = [this](bool success) {
@@ -41,7 +42,7 @@ bool Manager::quit(Undo& undo) {
     //     };
     //     return false;
     // }
-    return true;
+    // return true;
 }
 
 void Manager::invalidate_obj(Scene_ID id) {
